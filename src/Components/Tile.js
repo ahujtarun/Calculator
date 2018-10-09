@@ -1,12 +1,18 @@
-import React, {propTypes} from 'react'
+import React from 'react';
+import '../Stylesheets/Tile.css'
 
+export const Tile = ({onTileClicked, text}) => {
 
-export const Tile = ({text, operator}) => (
-    <label>{text}</label>
-)
+    const clicked = (e) => {
+        e.preventDefault()
+        onTileClicked(e.target.innerText)
+    }
 
+     return (
+        <button onClick={clicked}>{text}</button>
 
-// Tile.propTypes = {
-//     text: propTypes.string.isRequired,
-//     operator: propTypes.boolean
-// }
+    )
+ }
+ 
+
+    
