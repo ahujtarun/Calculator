@@ -1,4 +1,5 @@
-import {Tile} from './Components/Tile';
+import React from 'react';
+import {Tile} from './Tile';
 
 export const TileGrid = () => (
     <table width="100%">                            
